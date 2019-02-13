@@ -1,10 +1,71 @@
 <!DOCTYPE html>
 <html lang="en-us">
-    <head>
-        <meta charset="UTF-8">
-        <title>Crystals Collector</title>
-    </head>
-    <body>
-        <h1>Howdy!</h1>
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Crystals Collector</title>
+    <link href="assets/css/reset.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <h1>Crystals Collector!</h1>
+
+    </header>
+    <div class='row'>
+        <p>You will be given a random number at the start of the game.</p>
+        <p>
+            There are four crystals below. By clicking on a crystal you will add a
+            specific amount of points to your total score.
+        </p>
+        <p>
+            You win the game by matching your total score to random number,
+            you lose the game if your total score goes above the random number.
+        </p>
+        <p>
+            The value of each crystal is hidden from you until you click on it.
+        </p>
+        <p>
+            Each time when the game starts, the game will change the value of each crystal.
+        </p>
+    </div>
+
+    <div class='row'>
+        <div class='col-3'>
+            <div><span id='number-to-guess'></span></div>
+        </div>
+        <div class='col-3'>
+            <div>Wins: <span id="wins"></span></div>
+            <div>Losses: <span id="losses"></span></div>
+        </div>
+    </div>
+
+    <div class='row'>
+        <div id='crystal'></div>
+        <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp">Eucalyp</a> from <a
+            href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a
+            href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0
+            BY</a></div> -->
+    </div>
+    
+
+    <div class='row'>
+        <p>Your total score is:</p>
+    </div>
+
+    <div class='row'>
+        <div class='col-3'><span id='score'></span></div>
+    </div>
+
+    
+
+
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/game.js"></script>
+</body>
+
 </html>
