@@ -6,9 +6,9 @@ var numberOptions = [10, 5, 3, 7];
 
 $('#number-to-guess').text(targetNumber);
 
-for (let picture of numberOptions) {
-    var crystalImage = $('<img>');
-    crystalImage.addClass('crystal-image');
-    crystalImage.attr('src', 'assets/images/crystal.svg');
-    $('#crystal').append(crystalImage);
-}
+// for (let picture of numberOptions) {
+//     var crystalImage = $('<img>');
+//     crystalImage.addClass('crystal-image');
+//     crystalImage.attr('src', 'assets/images/crystal.svg');
+//     $('#crystal').append(crystalImage);
+// }
