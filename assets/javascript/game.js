@@ -14,3 +14,13 @@ for (var i = 0; i < numberOptions.length; i++) {
     crystalImage.attr('data-value', numberOptions[i]);
     $('#crystal').append(crystalImage);
 }
+
+
+
+$('.crystal-image').on('click', function() {
+    var crystalValue = $(this).attr('data-value');
+    crystalValue = parseInt(crystalValue);
+    counter += crystalValue;
+    $('#score').html(counter);
+});
+
