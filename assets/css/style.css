@@ -23,6 +23,10 @@ footer {
     color: #fff;
 }
 
+.display-4 {
+    font-weight: bolder;
+}
+
 a {
     color: orange;
 }
