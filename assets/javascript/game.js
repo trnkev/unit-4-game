@@ -1,26 +1,45 @@
 var wins = 0;
 var losses = 0;
 var counter = 0;
-var targetNumber = Math.floor(Math.random()*100 + 25);
-var numberOptions = [10, 5, 3, 7];
-var imageOptions = ['gems','diamond','crystal','crystals'];
+var targetNumber = 0;
+var imageOptions = ['#gems', '#diamond', '#crystal', '#crystals'];
 
-$('#number-to-guess').text(targetNumber);
-
-for (var i = 0; i < numberOptions.length; i++) {
-    var crystalImage = $('<img>');
-    crystalImage.addClass('crystal-image');
-    crystalImage.attr('src', 'assets/images/' + imageOptions[i] +'.svg');
-    crystalImage.attr('data-value', numberOptions[i]);
-    $('#crystal').append(crystalImage);
+function generateGems() {
+    for (let id of imageOptions) {
+        var random = Math.floor(Math.random() * 12 + 1);
+        var crystalImage = $(id);
+        crystalImage.attr('data-value', random);
+    }
 }
 
+function reset() {
+    var random = Math.floor(Math.random() * 101 + 19);
+    targetNumber = random;
+    counter = 0;
+    $('#score').html(0);
+    generateGems();
+}
 
+reset();
 
-$('.crystal-image').on('click', function() {
+$('.crystal-image').on('click', function () {
     var crystalValue = $(this).attr('data-value');
     crystalValue = parseInt(crystalValue);
     counter += crystalValue;
     $('#score').html(counter);
+
+    if (counter === targetNumber) {
+        alert('You win!');
+        ++wins;
+        $('#wins').html(wins);
+        reset();
+    } else if (counter > targetNumber) {
+        alert('Sorry, you lost!');
+        ++losses;
+        $('#losses').html(losses);
+        reset();
+    }
+    $('#number-to-guess').text(targetNumber);
+
 });
 
