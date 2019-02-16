@@ -8,6 +8,10 @@
     padding: 20px;
 }
 
+.container {
+    overflow: scroll;
+}
+
 footer {
     margin: 0;
     padding: 20px;
