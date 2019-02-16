@@ -11,8 +11,24 @@
 footer {
     margin: 0;
     padding: 20px;
-    text-align: center;
+    display: block;
 }
 .credit {
     font-size: 12px;
+}
+
+.jumbotron, footer {
+    background-color: #747ef7;
+    text-align: center;
+    color: #fff;
+}
+
+a {
+    color: orange;
+}
+
+@media screen and (min-width: 980px) {
+    .container {
+        width: 720px;
+    }
 }
