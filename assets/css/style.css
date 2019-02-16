@@ -32,3 +32,9 @@ a {
         width: 720px;
     }
 }
+
+#computer-guess {
+    text-align: center;
+    font-weight: bold;
+    font-size: -webkit-xxx-large;
+}
